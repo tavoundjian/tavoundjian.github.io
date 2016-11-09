@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <meta charset="utf-8" />
+        <title>SRGE Dataset Template</title>
+        <link rel="stylesheet" href="/theme/css/main.css" />
+
+        <!--[if IE]>
+            <script src="https://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
+</head>
+
+<body id="index" class="home">
+        <header id="banner" class="body">
+                <h1><a href="/">Hi, I'm Tigran. </a></h1>
+                <nav><ul>
+                    <li class="active"><a href="/category/srge.html">SRGE</a></li>
+                </ul></nav>
+        </header><!-- /#banner -->
+<section id="content" class="body">
+  <article>
+    <header>
+      <h1 class="entry-title">
+        <a href="/srge-dataset-template.html" rel="bookmark"
+           title="Permalink to SRGE Dataset Template">SRGE Dataset Template</a></h1>
+    </header>
+
+    <div class="entry-content">
+<footer class="post-info">
+        <abbr class="published" title="2016-11-08T00:00:00-08:00">
+                Published: Tue 08 November 2016
+        </abbr>
+
+        <address class="vcard author">
+                By                         <a class="url fn" href="/author/tigran-avoundjian.html">Tigran Avoundjian</a>
+        </address>
+<p>In <a href="/category/srge.html">SRGE</a>.</p>
+
+</footer><!-- /.post-info -->      <h1>SRGE Data Set<sup>1</sup> Template</h1>
+<table>
+<thead>
+<tr>
+<th>Variable</th>
+<th>Required or Optional</th>
+<th>Description</th>
+<th>Example Values</th>
+<th>Comments/Other Requirements</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Case Status</td>
+<td>Required</td>
+<td>Binary identifier of early syphilis cases</td>
+<td><ul><li>1 = Presence of Disposition Code for Primary, Secondary or Early Syphilis (710, 720, 730)</li><li>0 = Otherwise</li></ul></td>
+<td>Case status must be a binary variable <br> Case definition may be modified based on health department needs and/or priorities</td>
+</tr>
+<tr>
+<td>Age Group</td>
+<td>Required</td>
+<td>Categorical variable indicating age</td>
+<td><ul><li>11-19</li><li>20-24</li><li>25-29</li><li>30-34</li><li>35-39</li><li>40-44</li><li>45-49</li><li>50-54</li><li>60-64</li><li>65-69</li><li>70+</li></ul></td>
+<td>Cut-points and age range are flexible and can be defined based on age distribution of population of interest</td>
+</tr>
+<tr>
+<td>Titer Value</td>
+<td>Required</td>
+<td>Categorical variable indicating titer result from RPR or VDRL test</td>
+<td><ul><li>Non-R</li><li>1:1</li><li>1:2</li><li>1:4</li><li>1:8</li><li>1:16</li><li>1:32+</li></ul></td>
+<td>Qualitative titer values can be included or excluded from reactor grid. SRGE does not provide support for cleaning or grouping qualitative results</td>
+</tr>
+<tr>
+<td>Gender</td>
+<td>Optional</td>
+<td>Categorical variable indicating gender</td>
+<td><ul><li>Male</li><li>Female</li></ul></td>
+<td>If data is available on lab report, gender can be used to reflect sexual preference or non-binary gender</td>
+</tr>
+<tr>
+<td>Test Type</td>
+<td>Optional</td>
+<td>Categorical variable indicating type of non-treponemal test performed</td>
+<td><ul><li>RPR</li><li>VDRL</li></ul></td>
+<td>All lab reports should correspond to non-treponemal tests only.<br>Blood false positives (i.e., negative treponemal test, but reactive non-treponemal test) should be accounted prior to importing data into SRGE</td>
+</tr>
+<tr>
+<td>Previous Result</td>
+<td>Optional</td>
+<td>Categorical variable indicating change in titer from previous result</td>
+<td>1 = Less than 2 titer increase<br>0 = New positive or 2+ titer increase</td>
+<td>Comparison to previous result must be performed prior to importing data into SRGE.<br>Example SAS code for comparing results is available here:</td>
+</tr>
+<tr>
+<td><sup>1</sup>Data set requirements: Data set should be in a .txt or .csv format and include all lab reports for non-treponemal tests (RPR and/or VDRL labs) from the specified time period. Blood false positives (i.e., reactive non-treponemal tests with a negative treponemal test) should be excluded prior to importing data into SRGE.</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+    </div><!-- /.entry-content -->
+
+  </article>
+</section>
+        <section id="extras" class="body">
+                <div class="blogroll">
+                        <h2>blogroll</h2>
+                        <ul>
+                            <li><a href="http://getpelican.com/">Pelican</a></li>
+                            <li><a href="http://python.org/">Python.org</a></li>
+                            <li><a href="http://jinja.pocoo.org/">Jinja2</a></li>
+                            <li><a href="#">You can modify those links in your config file</a></li>
+                        </ul>
+                </div><!-- /.blogroll -->
+                <div class="social">
+                        <h2>social</h2>
+                        <ul>
+
+                            <li><a href="#">You can add links in your config file</a></li>
+                            <li><a href="#">Another social link</a></li>
+                        </ul>
+                </div><!-- /.social -->
+        </section><!-- /#extras -->
+
+        <footer id="contentinfo" class="body">
+                <address id="about" class="vcard body">
+                Proudly powered by <a href="http://getpelican.com/">Pelican</a>, which takes great advantage of <a href="http://python.org">Python</a>.
+                </address><!-- /#about -->
+
+                <p>The theme is by <a href="http://coding.smashingmagazine.com/2009/08/04/designing-a-html-5-layout-from-scratch/">Smashing Magazine</a>, thanks!</p>
+        </footer><!-- /#contentinfo -->
+
+</body>
+</html>
